@@ -75,7 +75,6 @@ public class DeviceSettings extends PreferenceFragment
     private ListPreference mBottomKeyPref;
     private VibratorStrengthPreference mVibratorStrength;
     private LineageLockPatternUtils mLineageLockPatternUtils;
-    private SwitchPreference mEnableDolbyAtmos;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
