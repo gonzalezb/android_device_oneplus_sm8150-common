@@ -68,11 +68,10 @@
     <string name="single_tap_gesture_summary">Allow offscreen gestures on single tap. To choose which gesture, go to touchscreen gestures below and select single tap gesture</string>
     <string name="direct_enabled">Directly showing PIN/Password is Enabled. Turn this off for this option to work</string>
 
-
     <string name="audio_title">Dolby Atmos</string>
-    <string name="dolby_title">Configuration</string>
-    <string name="dolby_summary">Configure the audio output based on media content.</string>
-    <string name="enable_dolby_title">Enable/Disable Dolby Atmos</string>
-    <string name="enable_dolby_summary">Switching REQUIRES a reboot to take effect!</string>
-    <string name="enable_dolby_info">Note: Currently dolby effects cannot be changed. Stay tuned for future updates when they are available</string>
+    <string name="dolby_title">Configure</string>
+    <string name="dolby_summary">Select and configure effects</string>
+    <string name="enable_dolby_summary">Enable/disable Dolby Atmos</string>
+    <string name="enable_dolby_title">Enable</string>
+    <string name="enable_dolby_info">Enable and disable requires reboot to take effect.</string>
 </resources>

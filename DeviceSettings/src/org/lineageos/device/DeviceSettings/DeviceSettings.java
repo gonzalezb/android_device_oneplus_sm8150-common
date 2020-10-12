@@ -26,6 +26,7 @@ import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -74,6 +75,7 @@ public class DeviceSettings extends PreferenceFragment
     private ListPreference mBottomKeyPref;
     private VibratorStrengthPreference mVibratorStrength;
     private LineageLockPatternUtils mLineageLockPatternUtils;
+    private SwitchPreference mEnableDolbyAtmos;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -121,11 +123,13 @@ public class DeviceSettings extends PreferenceFragment
         mSingleTapSwitch.setOnPreferenceChangeListener(new SingleTapSwitch());
 
         mEnableDolbyAtmos = (TwoStatePreference) findPreference(KEY_ENABLE_DOLBY_ATMOS);
+        mEnableDolbyAtmos = (SwitchPreference) findPreference(KEY_ENABLE_DOLBY_ATMOS);
         mEnableDolbyAtmos.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+
         if (preference == mTopKeyPref) {
             Constants.setPreferenceInt(getContext(), preference.getKey(), Integer.parseInt((String) newValue));
             return true;
@@ -158,6 +162,7 @@ public class DeviceSettings extends PreferenceFragment
                         PackageManager.COMPONENT_ENABLED_STATE_DISABLED, 0);
             }
             return true;
+
         }
         return false;
     }
